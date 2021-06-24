@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinkedList.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,36 @@ namespace LinkedList
             Console.Write(item + " ");
          }
          Console.WriteLine();
+
+
+         var duplexList = new DuplexLinkedList<int>();
+
+         duplexList.Add(55);
+         duplexList.Add(56);
+         duplexList.Add(57);
+         duplexList.Add(58);
+         duplexList.Add(59);
+
+         foreach (var item in duplexList)
+         {
+            Console.WriteLine(item);
+         }
+         Console.WriteLine();
+
+         duplexList.Delete(57);
+
+         foreach (var item in duplexList)
+         {
+            Console.WriteLine(item);
+         }
+         Console.WriteLine();
+
+         var reverse = duplexList.Reverse();
+
+         foreach (var item in reverse)
+         {
+            Console.WriteLine(item);
+         }
 
          Console.ReadLine();
       }
